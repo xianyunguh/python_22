@@ -115,3 +115,16 @@ if 2 > 1:
 print(222)
 '''
 
+# if else
+'''
+s1 = '100'
+i1 = int(s1)
+print(i1,type(i1))
+
+age = input("请输入年龄：")
+if int(age) > 18:
+    print("恭喜你成年了")
+else:
+    print("小屁孩儿")
+'''
+
