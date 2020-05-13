@@ -128,3 +128,71 @@ else:
     print("小屁孩儿")
 '''
 
+# if elif elif .... 多选一
+'''
+num = int(input('猜点数：'))
+
+if num == 1:
+    print('晚上请你吃饭')
+elif num == 3:
+    print('一起溜达')
+elif num == 2:
+    print('请你大宝剑')
+'''
+
+# if elif elif  .... else 多选一
+'''
+num = int(input('猜点数：'))
+if num == 1:
+    print('晚上请你吃饭')
+
+elif num == 3:
+    print('一起溜达')
+
+elif num == 2:
+    print('请你大宝剑')
+
+else:
+    print('太笨了.....')
+
+print('组合')
+'''
+
+# 嵌套的if
+'''
+if 条件：
+    if 条件：
+        if
+'''
+
+'''
+username = input('请输入用户名：')
+password = input('请输入密码：')
+code = 'qwer'
+your_code = input('请输入验证码：')
+
+if your_code == code:
+    if username == 'taibai' and password == '123':
+        print('登陆成功')
+    else:
+        print('帐号或密码错误')
+else:
+    print('验证码错误')
+'''
+
+'''
+score = int(input('输入分数：'))
+
+if score > 100:
+    print('我擦，最高分才100...')
+elif score >= 80:
+    print('B')
+elif score >= 90:
+    print('A')
+elif score >= 60:
+    print('C')
+elif score >= 40:
+    print('D')
+else:
+    print('太笨了...E')
+'''
