@@ -1,12 +1,63 @@
 # 1、用while循环写用户登陆（用户名、密码、验证码），3次不成功则退出。
+"""
+count = 0
+namex = 'liu'
+passwordx = '123456'
+codex = 'aaa'
+while count < 3:
+    name = input('请输入用户名：')
+    password = input('请输入密码：')
+    code = input('请输入验证码：')
+    if code == codex:
+        if name == namex and password == passwordx:
+            print('登陆成功')
+        else:
+            print('用户名或密码错误')
+    else:
+        print('验证码错误')
+
+    count += 1
+"""
 
 # 2、打印 1-100 所有的数字
+'''
+count = 1
+while count < 101:
+    print(count)
+    count += 1
+'''
 
 # 3、打印 1+2+3......100 的结果：
+'''
+count = 1
+sum = 0
+while count < 101:
+    sum = sum + count
+    count += 1
+print(sum)
+'''
 
 # 4、打印 1-100 所有偶数的和：
+'''
+count = 2
+sum = 0
+while count < 102:
+    sum = sum + count
+    count = count + 2
+print(sum)
+'''
 
 # 5、continue 退出本次循环，继续下一次循环
+'''
+count = 0
+sum = 0
+while count < 101:
+    count = count + 1
+    if count % 2:
+        continue
+    sum = sum + count
+print(sum)
+'''
 
 # 6、while else:   while 循环如果被 break 打断，则不执行 else 语句。
 
@@ -19,8 +70,30 @@ job  : Teacher
 Hobbie: girl
 -------- end --------
 """
+"""
+name = input('请输入姓名：')
+age = input('请输入年龄：')
+job = input('请输入工作：')
+hobbie = input('请输入爱好：')
+msg = '''
+-------- info of %s --------
+name : %s
+age  : %s
+job  : %s
+Hobbie: %s
+-------- end --------
+''' %(name,name,age,job,hobbie)
+
+print(msg)
+"""
 
 # 8、用占位符 % 输出 ”我叫 太白金星, 今年 18, 学习进度 1%" ,其中 1%不用占位符
+'''
+name = input('请输入姓名：')
+age = input('请输入年龄：')
+msg = "我叫 %s，今年 %s，学习进度 1%%。" %(name,age)
+print(msg)
+'''
 
 # 9、判断下面的打印结果：
 """
@@ -84,26 +157,64 @@ print(7.6 * 1024 * 1024 * 8)
 # Day2作业
 
 # 1.判断下列逻辑语句的True, False.
-# 1）1 > 1 or 3 < 4 or 4 > 5 and 2 > 1 and 9 > 8 or 7 < 6
-# 2）not 2 > 1 and 3 < 4 or 4 > 5 and 2 > 1 and 9 > 8 or 7 < 6
+'''
+1）1 > 1 or 3 < 4 or 4 > 5 and 2 > 1 and 9 > 8 or 7 < 6
+= False or  True or False and True and True or True
+= False or True or False and True or True 
+= False or True or False or True
+= True or False or True
+= True or True
+= True
+'''
+
+'''
+2）not 2 > 1 and 3 < 4 or 4 > 5 and 2 > 1 and 9 > 8 or 7 < 6
+= not True and True or False and True and True or False
+= False and True or False and True and True or False
+= False or False and True and True or False
+= False or False and True or False
+= False or False or False
+= False or False
+= False
+'''
 
 # 2.求出下列逻辑语句的值。
-# 1), 8 or 3 and 4 or 2 and 0 or 9 and 7
-# 2), 0 or 2 and 3 and 4 or 6 and 0 or 3
+'''
+1), 8 or 3 and 4 or 2 and 0 or 9 and 7
+= 8 or 4 or 0 or 7
+= 8 or 0 or 7
+= 8 or 7
+= 8
+'''
+
+'''
+2), 0 or 2 and 3 and 4 or 6 and 0 or 3
+= 0 or 3 and 4 or 0 or 3
+= 0 or 4 or 0 or 3
+= 4 or 0 or 3
+= 4 or 3
+= 4
+'''
 
 # 3.下列结果是什么？
-# 1)、6 or 2 > 1
-# 2)、3 or 2 > 1
-# 3)、0 or 5 < 4
-# 4)、5 < 4 or 3
-# 5)、2 > 1 or 6
-# 6)、3 and 2 > 1
-# 7)、0 and 3 > 1
-# 8)、2 > 1 and 3
-# 9)、3 > 1 and 0
-# 10)、3 > 1 and 2 or 2 < 3 and 3 and 4 or 3 > 2
+# 1)、6 or 2 > 1   # 6
+# 2)、3 or 2 > 1   # 3
+# 3)、0 or 5 < 4   # False
+# 4)、5 < 4 or 3   # 3
+# 5)、2 > 1 or 6   # Ture
+# 6)、3 and 2 > 1  # Ture
+# 7)、0 and 3 > 1  # 0
+# 8)、2 > 1 and 3  # 3
+# 9)、3 > 1 and 0  # 0
+# 10)、3 > 1 and 2 or 2 < 3 and 3 and 4 or 3 > 2  #
+# = 1 and 2 or 1 and 4 or 1
+# = 2 or 4 or 1
+# = 2 or 1
+# = 2
 
 # 4.while循环语句基本结构？
+while 条件：
+    循环体
 
 # 5.利用while语句写出猜大小的游戏：
 '''
