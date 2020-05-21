@@ -206,6 +206,7 @@ print(7.6 * 1024 * 1024 * 8)
 # 7)、0 and 3 > 1  # 0
 # 8)、2 > 1 and 3  # 3
 # 9)、3 > 1 and 0  # 0
+
 # 10)、3 > 1 and 2 or 2 < 3 and 3 and 4 or 3 > 2  #
 # = 1 and 2 or 1 and 4 or 1
 # = 2 or 4 or 1
@@ -213,8 +214,8 @@ print(7.6 * 1024 * 1024 * 8)
 # = 2
 
 # 4.while循环语句基本结构？
-while 条件：
-    循环体
+# while 条件：
+#     循环体
 
 # 5.利用while语句写出猜大小的游戏：
 '''
@@ -223,11 +224,45 @@ while 条件：
 只有等于66，显示猜测结果正确，然后退出循环。
 '''
 
+'''
+s = 66
+
+while True:
+    t = int(input('请输入一个数：'))
+    if t > 66:
+        print('太大了')
+    elif t < 66:
+        print('太小了')
+    else:
+        print('恭喜你，猜对了！')
+        break
+'''
+
 # 6.在5题的基础上进行升级：
 '''
 给用户三次猜测机会，如果三次之内猜测对了，则显示猜测正确，退出循环，
 如果三次之内没有猜测正确，则自动退出循环，并显示‘太笨了你....’。
 '''
+
+'''
+s = 66
+count = 0
+while True:
+    count += 1
+    t = int(input('请输入一个数：'))
+
+    if count == 3 and t != 66:
+        print('太笨了...')
+        break
+    elif t > 66:
+        print('太大了')
+    elif t < 66:
+        print('太小了')
+    else:
+        print('恭喜你，猜对了！')
+        break
+'''
+
 
 # 7.使用while循环输出
 '''
@@ -242,15 +277,77 @@ while 条件：
 10
 '''
 
+'''
+count = 1
+while count < 11:
+    print(count)
+    count += 1
+'''
+
 # 8.求1 - 100的所有数的和
+'''
+s = 1
+sum = 0
+while s < 101:
+    sum = sum + s
+    s += 1
+print(sum)
+'''
 
 # 9.输出1 - 100内的所有奇数
+'''
+s = 1
+sum = 0
+while s < 101:
+    sum = sum + s
+    s = s + 2
+print(sum)
+'''
 
 # 10.输出1 - 100内的所有偶数
+'''
+s = 2
+sum = 0
+while s < 101:
+    sum = sum + s
+    s = s + 2
+print(sum)
+'''
 
-# 11.求1 - 2 + 3 - 4 + 5...99的所有数的和
+# 11.求 1 - 2 + 3 - 4 + 5...99 的所有数的和
+'''
+count = 1
+s = 0
+while count < 100:
+    if count % 2:
+        s = s + count
+    else:
+        s = s - count
+    count += 1
+print(s)
+'''
 
 # 12.用户登录（三次输错机会）且每次输错误时显示剩余错误次数（提示：使用字符串格式化）
+'''
+count = 1
+x = 3
+while count <= 3:
+    name = input('请输入用户名：')
+    password = input('请输入密码：')
+    code = input('请输入验证码：')
+    if code == 'aaa':
+        if name == 'liu' and password == '123':
+            print('登陆成功')
+            break
+        else:
+            print('用户名或密码错误')
+    else:
+        print('验证码错误')
+
+    count += 1
+    x = x - 1
+    print('你还有 %d 次机会。' %(x))
+'''
 
 # 13.简述ASCII、Unicode、utf - 8编码
 '''
