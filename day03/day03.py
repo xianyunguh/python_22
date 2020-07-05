@@ -26,6 +26,17 @@
 # print(s1[:])
 # s8 = s1[-1:-6:-1]
 # print(s8)
+# s11 = s[4:0:-1]
+# print(s11)
+# s12 = s[3::-1]
+# print(s12)
+# s13 = s[3::-2]
+# print(s13)
+# s = 'ABCDLSESRF'
+# s14 = s[-1::-1]
+# print(s14)
+# s15 = s[::-1]
+# print(s15)
 
 # 7、倒序全部取出来：
 # s = 'taiBAIfdsa'
